@@ -2,6 +2,11 @@
 // > Avec la methode removeChild()
 // ## 1. 
 // - Utilise le second bouton pour supprimer le premier enfant
+const firstButton = document.getElementsByTagName('input')[0];
+firstButton.addEventListener("click", ()=>{
+    const firstDiv = document.getElementsByTagName('div')[0];
+    firstDiv.removeChild(firstDiv.firstElementChild);
+});
 // ## 2. 
 // - Utilise le second bouton pour supprimer le dernier enfant 
 // ## 3 .
