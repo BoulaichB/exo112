@@ -2,16 +2,23 @@
 // > Avec la methode removeChild()
 // ## 1. 
 // - Utilise le second bouton pour supprimer le premier enfant
+const firstDiv = document.getElementsByTagName('div')[0];
 const firstButton = document.getElementsByTagName('input')[0];
 firstButton.addEventListener("click", ()=>{
-    const firstDiv = document.getElementsByTagName('div')[0];
     firstDiv.removeChild(firstDiv.firstElementChild);
 });
 // ## 2. 
 // - Utilise le second bouton pour supprimer le dernier enfant 
+const secondButton = document.getElementsByTagName('input')[1];
+secondButton.addEventListener("click", () =>{
+    firstDiv.removeChild(firstDiv.lastElementChild);
+})
 // ## 3 .
 // - Utilise le dernier bouton pour supprimer un enfant au hasard
-
+const lastButton = document.getElementsByTagName('input')[2];
+lastButton.addEventListener("click", () =>{
+    firstDiv.removeChild(firstDiv.children[Math.floor(Math.random() * firstDiv.children.length)]);
+})
 
 // > https://developer.mozilla.org/fr/docs/Web/API/Node/replaceChild
 // > Avec la methode replaceChild()
