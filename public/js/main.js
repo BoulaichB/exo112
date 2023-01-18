@@ -37,3 +37,9 @@ button4.addEventListener('click', () =>{
 
 // ## 5. 
 // - Créer un programme qui permet avec l'input de créer un li et de remplacer le "li" 3 par celui ci en appuyant sur le bouton exercice 5
+const button5 = document.getElementsByTagName('input')[5];
+button5.addEventListener('click', ()=>{
+    const newLi = document.createElement('li');
+    newLi.innerText = document.getElementsByTagName('input')[4].value;
+    secondDiv.children[1].replaceChild(newLi, secondDiv.children[1].children[2]);
+})
