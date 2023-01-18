@@ -27,6 +27,13 @@ lastButton.addEventListener("click", () =>{
 // ## 4 . Dans la partie Remplacement de ton HTML
 // - Créer un élément li dans ton fichier JS
 // - Remplace le deuxième li par celui ci quand on clique sur le button exercice 4
+const secondDiv = document.getElementsByTagName('div')[1];
+const button4 = document.getElementsByTagName('input')[3];
+const listItem = document.createElement('li');
+listItem.innerText = "Remplacé lol";
+button4.addEventListener('click', () =>{
+    secondDiv.children[1].replaceChild(listItem, secondDiv.children[1].children[1]);
+});
 
 // ## 5. 
 // - Créer un programme qui permet avec l'input de créer un li et de remplacer le "li" 3 par celui ci en appuyant sur le bouton exercice 5
